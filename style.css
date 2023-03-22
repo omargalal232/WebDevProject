@@ -13,6 +13,11 @@ header {
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
+
+}
+
+h1 {
+    text-align: center;
 }
 
 nav {
@@ -165,6 +170,7 @@ nav ul li a:hover {
 
 .featured-cruises {
     margin-top: 40px;
+
 }
 
 .featured-cruise {
@@ -175,6 +181,7 @@ nav ul li a:hover {
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
+
 }
 
 .cruise-info {
