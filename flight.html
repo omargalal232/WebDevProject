@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Document</title>
     <link rel="stylesheet" href="flight.css">
 </head>
@@ -80,34 +81,114 @@
 <br>
 
 <body>
-    <div class="container">
-        <div class="title">
-            Ticket booking</div>
-        <div class="content">
-            <form action="#">
-                <div class = "d-flex align-items-center">
-                <div class = " form-check">
-                    <input class ="form-check-input" type = "radio" name = "flexRadioDefault" id="flexRadioDefault1" >
-                    <label class ="form-check-label fw-bold fs-7" for="flexRadioDefault1">
-                        Return
-                    </label>
-                    <input class ="form-check-input" type = "radio" name = "flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class ="form-check-label fw-bold fs-7" for="flexRadioDefault2">
-                        one way
-                    </label>
-                    <input class ="form-check-input" type = "radio" name = "flexRadioDefault" id="flexRadioDefault3" checked>
-                    <label class ="form-check-label fw-bold fs-7" for="flexRadioDefault3">
-                        multi-city
-                    </label>
-                </div>
-                <div class="button">
-                    <input type="submit" value="book">
-                </div>
-                <br>
-            </form>
-        
-     </div>
+    <div>
+        <h2 class="cairo">FLIGHTS</h2>
+        <h2 class="c">high above the sky</h2>
+
+        <img style="width: 100%; height: 350px;"
+            src="https://wallpapers.com/images/high/4k-plane-takeoff-39efmsuz0fhub1c3.webp" alt="">
+
+
     </div>
+    <br>
+    <form>
+        <label for="from">From:</label>
+        <select id="from" name="from">
+            <option value="Cairo">Cairo</option>
+            <option value="Alexandria">Alexandria</option>
+            <option value="Luxor">Luxor</option>
+            <option value="Aswan">Aswan</option>
+            <option value="Sharm El-Sheikh">Sharm El-Sheikh</option>
+        </select>
+
+        <label for="to">To:</label>
+        <select id="to" name="to">
+            <option value="London">London</option>
+            <option value="Paris">Paris</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Rome">Rome</option>
+            <option value="Berlin">Berlin</option>
+        </select>
+
+        <label for="depart">Depart:</label>
+        <select id="depart" name="depart">
+            <option value="Thu, 4/6">Thu, 4/6</option>
+            <option value="Fri, 4/7">Fri, 4/7</option>
+            <option value="Sat, 4/8">Sat, 4/8</option>
+            <option value="Sun, 4/9">Sun, 4/9</option>
+            <option value="Mon, 4/10">Mon, 4/10</option>
+        </select>
+
+        <label for="return">Return:</label>
+        <select id="return" name="return">
+            <option value="Thu, 4/13">Thu, 4/13</option>
+            <option value="Fri, 4/14">Fri, 4/14</option>
+            <option value="Sat, 4/15">Sat, 4/15</option>
+            <option value="Sun, 4/16">Sun, 4/16</option>
+            <option value="Mon, 4/17">Mon, 4/17</option>
+        </select>
+
+        <label for="travelers">Travelers:</label>
+        <select id="travelers" name="travelers">
+            <option value="1, Economy">1, Economy</option>
+            <option value="2, Economy">2, Economy</option>
+            <option value="3, Economy">3, Economy</option>
+            <option value="1, Business">1, Business</option>
+            <option value="2, Business">2, Business</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+    <section id="deals">
+        <h2>Great deals from Egypt</h2>
+        <p>We’ve searched 100s of deals recently found by travelers.</p>
+        <div class="row">
+            <div class="deal">
+                <h3>Cairo, Egypt (CAI) - Hurghada, Egypt (HRG)</h3>
+                <p>Thu, 4/6 - Thu, 4/13</p>
+                <p>EgyptAir - Roundtrip, Economy</p>
+                <p>EGP 1,500</p>
+            </div>
+            <div class="deal">
+                <h3>Cairo, Egypt (CAI) - Alexandria, Egypt (ALY)</h3>
+                <p>Thu, 4/6 - Thu, 4/13</p>
+                <p>EgyptAir - Roundtrip, Economy</p>
+                <p>EGP 1,700</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="deal">
+                <h3>Cairo, Egypt (CAI) - Sharm El-Sheikh, Egypt (SSH)</h3>
+                <p>Thu, 4/6 - Thu, 4/13</p>
+                <p>EgyptAir - Roundtrip, Economy</p>
+                <p>EGP 2,000</p>
+            </div>
+            <div class="deal">
+                <h3>Cairo, Egypt (CAI) - Luxor, Egypt (LXR)</h3>
+                <p>Thu, 4/6 - Thu, 4/13</p>
+                <p>EgyptAir - Roundtrip, Economy</p>
+                <p>EGP 2,200</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="deal">
+                <h3>Sharm El-Sheikh, Egypt (SSH) - Hurghada, Egypt (HRG)</h3>
+                <p>Thu, 4/6 - Thu, 4/13</p>
+                <p>EgyptAir - Roundtrip, Economy</p>
+                <p>EGP 2,500</p>
+            </div>
+            <div class="deal">
+                <h3>Alexandria, Egypt (ALY) - Sharm El-Sheikh, Egypt (SSH)</h3>
+                <p>Thu, 4/6 - Thu, 4/13</p>
+                <p>EgyptAir - Roundtrip, Economy</p>
+                <p>EGP 2,800</p>
+            </div>
+        </div>
+    </section>
+
 </body>
+<footer>
+    <p><i class="fa fa-plane" aria-hidden="true"></i> &copy; 2023 GoEgy. All Rights Reserved.</p>
+</footer>
 
 </html>
