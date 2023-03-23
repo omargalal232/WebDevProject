@@ -3,6 +3,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f1f1f1;
+
 }
 
 header {
@@ -46,13 +47,21 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-nav ul li a:hover {
+nav ul li:hover>ul {
+    display: block;
+}
+
+nav ul li:hover a {
     color: #f1f1f1;
     background-color: #333;
     padding: 10px 20px;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
+
 }
+
+
+
 
 
 
