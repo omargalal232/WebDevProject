@@ -205,3 +205,7 @@ nav ul li:hover a {
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
 }
+
+footer {
+    text-align: center;
+}
