@@ -3,7 +3,13 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: #f1f1f1;
+  color: black;
+  transition: background-color 1s , color 1s;
 
+}
+
+.container {
+  height: 100%;
 }
 
 header {
@@ -17,9 +23,32 @@ header {
 
 }
 
-h1 {
-  text-align: center;
+
+
+
+.background-image {
+  background: url('yachthero.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
 }
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content > h1 {
+  color: white;
+  font-size: 48px;
+  margin-top: 40%;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
 
 nav {
   background-color: #fff;
@@ -130,7 +159,7 @@ nav ul li:hover a {
   align-items: center;
   background-color: #fff;
   padding: 20px;
-  margin-top: 50px;
+  /* margin-top: 30px; */
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -172,147 +201,118 @@ nav ul li:hover a {
 .fa-dollar-sign:before {
   content: "\f155";
 }
-
-.featured-cruises {
-  margin-top: 40px;
-
-}
-
-.featured-cruise {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
-
-}
-
-.cruise-info {
-  flex: 1;
-}
-
-.cruise-name {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.cruise-details {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.cruise-price {
-  font-size: 20px;
-  font-weight: bold;
-  margin-right: 20px;
-}
-
-.cruise-sale-price {
-  font-size: 20px;
-  color: #f00;
-  font-weight: bold;
-}
-
-.view-cruise-btn {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-.view-cruise-btn:hover {
-  background-color: #f00;
-}
-
 .cruise-deals {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  
+  width: 100%;
+  max-width: 100%;
+   
+   margin-left: -2%;
+   padding-right: 3%;
+   
+  background-color: black;
+  color: white;
 }
 
 .cruise-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 30px;
+  align-items: center;
+  max-width: 1200px; /* Add a max-width to the container */
+  margin: 0 auto; /* Center the container using margin: 0 auto; */
 }
 
 .cruise-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-basis: calc(50% - 40px);
+  width: calc(50% - 20px);
+  margin-bottom: 40px;
+  border: 2px solid #ddd;
   padding: 20px;
-  border: 1px solid #ddd;
-  margin: 0 20px 20px 0;
+  position: relative;
+  flex-basis: calc(50% - 10px);
+  margin-right: 10px;
 }
 
-.cruise-box:nth-child(2n) {
+.cruise-box:nth-child(2n+1) {
   margin-right: 0;
 }
 
-.cruise-box h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
+.cruise-image {
+  width: 100%;
+  margin-right: 20px; /* Uncomment this line to add margin between the image and details */
 }
 
 .cruise-details {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 16px;
 }
 
 .cruise-details p {
-  margin: 5px 0;
-}
-
-.cruise-price {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: auto;
-  margin-bottom: 10px;
-}
-
-.cruise-price p {
-  font-size: 20px;
   margin: 0;
 }
 
-.view-cruise {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.view-cruise:hover {
-  background-color: #222;
+.cruise-price {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .cruise-sale-price {
-  color: red;
+  color: #d70808;
   text-decoration: line-through;
   margin-right: 10px;
 }
 
-.cruise-sale-price span {
+.view-cruise {
+  display: inline-block;
+  background-color: #ff7f50;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
   text-decoration: none;
-  color: inherit;
-  border-bottom: 2px solid red;
-  padding-bottom: 2px;
+  margin-top: 20px;
 }
+
+.view-cruise:hover {
+  background-color: #ffa07a;
+  cursor: pointer;
+}
+
+.cruise-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.cruise-image {
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.view-cruise {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background-color: #ff7f50;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.cruise-box:hover .cruise-image {
+  transform: translateY(50%);
+}
+
+.cruise-box:hover .view-cruise {
+  opacity: 1;
+}
+
+
+
+
 
 .island-destination {
   display: flex;
@@ -345,6 +345,10 @@ nav ul li:hover a {
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 1;
+
+  
 }
 
 .cruising-guide h2 {
@@ -380,16 +384,160 @@ nav ul li:hover a {
 footer {
   text-align: center;
   padding: 20px 0;
+  background-color: black;
+  width: 100%;
+  position: absolute;
+  top: 573%;
+  left: 0;
+  right: 0;
 }
+
 
 footer p {
   font-size: 16px;
-  color: #555;
+  color: #ffffff;
   margin: 0;
 }
 
 footer .fas {
   font-size: 24px;
   margin-right: 10px;
-  color: #555;
+  color: #ffffff;
 }
+
+
+
+.rating:not(:checked) > input {
+  position: absolute;
+  appearance: none;
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+  color: #666;
+}
+
+.rating:not(:checked) > label:before {
+  content: '★';
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #e58e09;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #ff9e0b;
+}
+
+.rating > input:checked ~ label {
+  color: #ffa723;
+}
+
+
+
+label {
+  
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 15px 10px 10px;
+  cursor: pointer;
+  user-select: none;
+  
+  color: rgb(255, 255, 255);
+ }
+ 
+ input {
+  display: none;
+ }
+ 
+ input:checked + label svg {
+  fill: hsl(0deg 100% 50%);
+  stroke: hsl(0deg 100% 50%);
+  animation: heartButton 1s;
+ }
+ 
+ @keyframes heartButton {
+  0% {
+   transform: scale(1);
+  }
+ 
+  25% {
+   transform: scale(1.3);
+  }
+ 
+  50% {
+   transform: scale(1);
+  }
+ 
+  75% {
+   transform: scale(1.3);
+  }
+ 
+  100% {
+   transform: scale(1);
+  }
+ }
+ 
+ input + label .action {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+ }
+ 
+ input + label .action span {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  transition: all .5s;
+ }
+ 
+ input + label .action span.option-1 {
+  transform: translate(0px,0%);
+  opacity: 1;
+ }
+ 
+ input:checked + label .action span.option-1 {
+  transform: translate(0px,-100%);
+  opacity: 0;
+ }
+ 
+ input + label .action span.option-2 {
+  transform: translate(0px,100%);
+  opacity: 0;
+ }
+ 
+ input:checked + label .action span.option-2 {
+  transform: translate(0px,0%);
+  opacity: 1;
+ }
+ 
+ .yacht-animation {
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.yacht-animation video {
+  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 473%;
+  left: 0%;
+  right: 0%;
+  
+}
+
+

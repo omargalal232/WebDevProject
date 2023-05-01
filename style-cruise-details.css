@@ -3,6 +3,8 @@ body {
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
+    background-image: url('yacht.jpg');
+    background-size: cover;
 }
 
 header {
@@ -30,13 +32,15 @@ h1 {
 .cruise-details {
     display: flex;
     margin: 20px;
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    text-align: center;
+    padding-left: 35%;
+    
 }
 
-.cruise-details-left {
-    flex: 1;
-    padding-right: 20px;
-    margin-right: 20px;
-}
+
 
 
 
@@ -122,7 +126,8 @@ h1 {
 
 
 .overview {
-    background-color: #fff;
+    background-color: #000000;
+    color: white;
     padding: 20px;
     margin: 20px;
     box-shadow: 0px 2px 5px #888;
@@ -140,7 +145,8 @@ h1 {
 }
 
 .reviews {
-    background-color: #fff;
+    background-color: #000000;
+    color: white;
     padding: 20px;
     margin: 20px;
     box-shadow: 0px 2px 5px #888;
@@ -208,4 +214,7 @@ nav ul li:hover a {
 
 footer {
     text-align: center;
+    background-color: black;
+    color: white;
+    padding : 2%;
 }
